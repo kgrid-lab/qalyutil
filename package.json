@@ -1,0 +1,20 @@
+{
+  "name": "@kgrid/qalyutil",
+  "version": "1.0.1",
+  "description": "The utility library for QALY Lookup from the microsimulation result",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [
+    "qaly"
+  ],
+  "author": "KGRID Team",
+  "license": "GPL-3.0-or-later",
+  "dependencies": {
+    "fs-extra": "^8.1.0"
+  },
+  "devDependencies": {
+    "jest": "^25.1.0"
+  }
+}
