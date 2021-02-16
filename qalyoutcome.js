@@ -26,10 +26,14 @@ function qalyoutcome(path, config, inputs){
         output[e.id]= outputObj
       })
     } else {
-      output.error = "Entry not found in the look up table."
+      output[config.id]={}
+      output[config.id].id=config.id
+      output[config.id].error = "Entry not found in the look up table."
     }
   } else {
-    output.error = "No look up table available."
+    output[config.id]={}
+    output[config.id].id=config.id
+    output[config.id].error = "No look up table available."
   }
   return output
 }
