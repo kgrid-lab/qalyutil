@@ -1,10 +1,7 @@
 function ptlevels(config, features){
 
   const lvls = config.columns
-  const debug = config.debug
-
   var pt = features
-
   var ptlvl={}
 
   for(var key in pt) {

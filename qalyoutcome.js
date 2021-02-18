@@ -12,6 +12,9 @@ function qalyoutcome(path, config, inputs){
 
   if(Object.keys(luindex).length!=0){
     var result = csvValue(luindex.tableid, luindex.index)
+    if(process.env.DEBUG){
+      output.debugentry=result
+    }
     if(Object.keys(result).length!=0){
       config.outputs.forEach(function(e){
         let outputObj ={}

@@ -2,7 +2,6 @@ const path = require('path')
 
 function lookupindex(datasrc, config, csvfileIndex, ptlvl){
   const factors = computeFactors(config.columns)
-  const debug = config.debug
   const hasHeader = config.csv_with_header_row
 
   if(csvfileIndex!=-1){
