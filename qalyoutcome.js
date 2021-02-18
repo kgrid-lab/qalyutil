@@ -12,9 +12,6 @@ function qalyoutcome(path, config, inputs){
 
   if(Object.keys(luindex).length!=0){
     var result = csvValue(luindex.tableid, luindex.index)
-    if(process.env.DEBUG){
-      output.debugentry=result
-    }
     if(Object.keys(result).length!=0){
       config.outputs.forEach(function(e){
         let outputObj ={}
@@ -26,6 +23,9 @@ function qalyoutcome(path, config, inputs){
         outputObj.data_source = {}
         outputObj.data_source.updateDate = config.updatedOn
         outputObj.data_source.type = config.datatype
+        if(process.env.DEBUG){
+          outputObj.data_source.debugentry=result
+        }
         output[e.id]= outputObj
       })
     } else {
