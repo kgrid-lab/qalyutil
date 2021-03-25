@@ -6,7 +6,11 @@ function csvrowvalue(csvfile, rowindex){
   try {
     var data = fs.readFileSync(csvfile)
     var array = data.toString().split("\n");
-    var headers = array[0].replace("\r","").split(",")
+    var rawHeaders = array[0].replace("\r","").split(",")
+    var headers=[]
+    rawHeaders.map(function(header, index){
+      headers.push(header.trim().toLowerCase())
+    })
     var values = array[rowindex].replace("\r","").split(",")
     if(headers.length>=values.length){
       headers.forEach(function(header,index){

@@ -14,12 +14,13 @@ function qalyoutcome(path, config, inputs){
     var result = csvValue(luindex.tableid, luindex.index)
     if(Object.keys(result).length!=0){
       config.outputs.forEach(function(e){
+        let field = e.field.trim().toLowerCase()
         let outputObj ={}
         outputObj.id = e.id
-        outputObj.field = e.field
+        outputObj.field = field
         outputObj.service = config.id
         outputObj.qaly = {}
-        outputObj.qaly.gain = result[e.field]
+        outputObj.qaly.gain = result[field]
         outputObj.data_source = {}
         outputObj.data_source.updateDate = config.updatedOn
         outputObj.data_source.type = config.datatype
