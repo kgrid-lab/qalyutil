@@ -1,0 +1,27 @@
+{
+  "id": "testService",
+  "filenames": {
+    "age": [30]
+  },
+  "columns": {
+    "gender": [0,1],
+    "smokeYears": [0,1,2]
+  },
+  "files": [
+    {
+      "name": "test_30.csv",
+      "offset": 0
+    }
+  ],
+  "outputs":[
+    {
+      "id": "testService",
+      "field": "test"
+    }
+  ],
+  "debug": true,
+  "dataset_full": true,
+  "csv_with_header_row": true,
+  "datatype": "Test",
+  "updatedOn": "202000421"
+}
